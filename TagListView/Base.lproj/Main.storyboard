@@ -41,12 +41,21 @@
                                     <action selector="valueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="feu-Uy-5XA"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWV-yk-BA6">
+                                <rect key="frame" x="200" y="90" width="53" height="30"/>
+                                <state key="normal" title="添加tag"/>
+                                <connections>
+                                    <action selector="addAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eR1-ud-y8g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8H0-8A-4OV" firstAttribute="centerY" secondItem="LX3-Ke-aAm" secondAttribute="centerY" id="0He-uG-6cz"/>
                             <constraint firstItem="LX3-Ke-aAm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="7Od-ij-fCP"/>
+                            <constraint firstItem="qWV-yk-BA6" firstAttribute="leading" secondItem="8H0-8A-4OV" secondAttribute="trailing" constant="10" id="8Mu-i8-W9R"/>
                             <constraint firstItem="jjJ-pO-TPL" firstAttribute="leading" secondItem="LX3-Ke-aAm" secondAttribute="leading" id="JHE-hf-F4e"/>
+                            <constraint firstItem="qWV-yk-BA6" firstAttribute="centerY" secondItem="8H0-8A-4OV" secondAttribute="centerY" id="P4Q-sv-Mxg"/>
                             <constraint firstItem="8H0-8A-4OV" firstAttribute="leading" secondItem="LX3-Ke-aAm" secondAttribute="trailing" constant="17" id="aN9-oG-2nl"/>
                             <constraint firstItem="jjJ-pO-TPL" firstAttribute="top" secondItem="LX3-Ke-aAm" secondAttribute="bottom" constant="37" id="jhb-Yf-fF8"/>
                             <constraint firstItem="LX3-Ke-aAm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kHy-Wb-xQR"/>
@@ -57,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975.20000000000005" y="33.733133433283363"/>
+            <point key="canvasLocation" x="1063" y="11"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kzG-Sd-0FX">

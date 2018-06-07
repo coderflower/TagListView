@@ -13,10 +13,10 @@ public protocol TagViewItem {
 }
 
 public protocol TagListViewDelegate: NSObjectProtocol {
-    func tagListView(_ tagListView:TagListView, updateSelectedItems: [TagViewItem])
+    func tagListView(_ tagListView:TagListView, updateSelected items: [TagViewItem])
 }
 extension TagListViewDelegate {
-    func tagListView(_ tagListView:TagListView, updateSelectedItems: [TagViewItem]){}
+    func tagListView(_ tagListView:TagListView, updateSelected items: [TagViewItem]){}
 }
 /// 标签选择模式
 public enum TagSelectionMode {
@@ -201,7 +201,7 @@ public class TagListView: UIView {
             }
         }
         /// 告诉代理更新选中的 items
-        delegate?.tagListView(self, updateSelectedItems: selectedItems)
+        delegate?.tagListView(self, updateSelected: selectedItems)
     }
     
 
@@ -245,7 +245,6 @@ public class TagListView: UIView {
         var originY: CGFloat = config.marginY
         for tagView in tagViews {
             tagView.enableSelect = (selectionMode != .none)
-            tagView.backgroundColor = UIColor.gray
             // 获取尺寸
             tagView.frame.size = tagView.intrinsicContentSize
             tagViewHeight = tagView.frame.height

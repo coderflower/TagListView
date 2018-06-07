@@ -21,9 +21,9 @@ class ViewController: UIViewController {
         view.addSubview(tagListView)
 //        tagListView.items = [Item(title: "测试")]
 //        tagListView.addTag("测试")
-        tagListView.addTags([Item(title: "花菜1"),Item(title: "花菜2")])
+        tagListView.addTags([Item(title: "就是要叫花菜1"),Item(title: "花菜2"),Item(title: "花菜花菜3"),Item(title: "就是要叫花菜4"),Item(title: "花菜5"),Item(title: "就是要叫花菜6"),Item(title: "花菜7"),Item(title: "就是要叫花菜8")])
         tagListView.selectionMode = .none
-        
+        tagListView.delegate = self
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "更新配置", style: .done, target: self, action: #selector(updateTageViewConfig))
     }
 
@@ -57,9 +57,20 @@ class ViewController: UIViewController {
         default: break
         }
     }
+    
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        tagListView.addTag(Item(title: "花菜3"))
+        /// 删除指定 item
         tagListView.removeTag(Item(title: "花菜1"))
+    }
+    @IBAction func addAction(_ sender: Any) {
+        tagListView.addTag(Item(title: "花菜\(arc4random())"))
     }
 }
 
+extension ViewController: TagListViewDelegate {
+    func tagListView(_ tagListView: TagListView, updateSelected items: [TagViewItem]) {
+        debugPrint("选中的标签个数 == \(items.count)")
+    }
+}
